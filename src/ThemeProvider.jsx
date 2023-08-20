@@ -30,15 +30,15 @@ export const ThemeProvider = ({ children }) => {
 const lightThemeClass = () => {
     return {
         backgroundPrimary : 'bg-[#F1F5F9]',
+        backgroundSecondary : 'bg-white',
         textPrimary : 'text-slate-950',
-
     }
 }
 
 const darkThemeClass = () => {
     return {
         backgroundPrimary : 'bg-[#0E1B31]',
+        backgroundSecondary : 'bg-[#132347]',
         textPrimary : 'text-slate-50',
-
     }
 }

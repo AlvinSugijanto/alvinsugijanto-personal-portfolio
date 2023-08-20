@@ -75,17 +75,20 @@ function Skills() {
     const { darkMode, toggleMode, themeClass } = useTheme();
 
     return (
-        
-        <div className='flex flex-col gap-12 py-12'>
+
+        <div className='flex flex-col gap-24 py-24'>
             <div className="relative text-center">
                 <div className="absolute -top-8 w-full opacity-20 -z-1">
                     <p className='bg-clip-text text-transparent bg-gradient-to-t from-slate-300 to-slate-950 text-6xl font-extrabold'>My Skills</p>
                 </div>
                 <p className={`z-1 text-5xl font-extrabold font-bricolage ${themeClass.textPrimary}`}>My Skills</p>
             </div>
-            <p className={`text-center text-xl ${themeClass.textPrimary}`}>Here are some tech stack and tools that I have learned</p>
-            <div className="flex justify-center items-center">
-                <div className="mx-auto border-2 border-sky-500 rounded-xl py-12 lg:px-24 sm:px-12 px-4">
+            <div className="flex lg:flex-row flex-col justify-center items-center gap-12">
+                <div className="lg:text-right text-center lg:order-2">
+                    <p className="font-bricolage text-3xl max-w-s">Tech Stack⚙️ & Tools🛠️</p>
+                    <p className={`text-xl ${themeClass.textPrimary} mt-4 max-w-xs`}>Here are some tech stack and tools that I have learned</p>
+                </div>
+                <div className={`${themeClass.backgroundSecondary} rounded-xl py-12 lg:px-12 sm:px-12 px-4`}>
                     <div className="flex justify-center gap-8">
                         <div className={`flex items-center gap-2 hover:text-sky-500 cursor-pointer ${skillSection === 'fe' ? 'text-sky-500' : ''} `} onClick={() => setSkillSection('fe')}>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -101,11 +104,11 @@ function Skills() {
                             <p className={`font-bricolage font-semibold text-lg`}>Backend Stack</p>
                         </div>
                     </div>
-                    <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 xl:gap-24 sm:gap-12 gap-4 mt-12 place-items-center">
+                    <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 justify-items-center xl:gap-24 sm:gap-12 gap-4 mt-12 ">
                         {skillSection === 'fe' ? (
                             <>
                                 {frontendStack.map((items) => (
-                                    <div key={items.nama} className="flex flex-col justify-center items-center">
+                                    <div key={items.nama} className=" w-24">
                                         <div className="drop-shadow-custom border rounded-full p-6 bg-slate-100" >
                                             <img src={`./${items.image}`} alt="" className="w-12 h-12 object-contain" />
                                         </div>
@@ -116,7 +119,7 @@ function Skills() {
                         ) : (
                             <>
                                 {backendStack.map((items) => (
-                                    <div key={items.nama} className="flex flex-col justify-center items-center">
+                                    <div key={items.nama} className="w-24">
                                         <div className="drop-shadow-custom border rounded-full p-6 bg-slate-100" >
                                             <img src={`./${items.image}`} alt="" className="w-12 h-12 object-contain" />
                                         </div>
@@ -127,8 +130,10 @@ function Skills() {
                         )}
                     </div>
                 </div>
+
             </div>
         </div>
+
 
     )
 }
