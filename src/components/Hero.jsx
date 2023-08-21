@@ -1,14 +1,24 @@
 import React from 'react'
 import { useTheme } from '../ThemeProvider';
 import { TypeAnimation } from 'react-type-animation';
+import { animate, motion } from 'framer-motion';
+
 
 function Hero() {
     const { darkMode, toggleMode, themeClass } = useTheme();
 
     return (
         <div className="px-16 py-16 grid lg:grid-cols-2 justify-items-center items-center lg:gap-0 gap-16">
-            <div className='text-lg text-center'>
-                <p className='text-gray-400 font-bold'>Hi There,</p>
+            <motion.div className='text-lg text-center' variants={{
+                hidden: { opacity: 0, x: -150 },
+                visible: { opacity: 1, x: 0 },
+            }}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 1 }}
+            >
+
+                <p className={`${themeClass.textPrimary} font-bold`}>Hi There,</p>
                 <p className='font-bricolage font-bold text-5xl text-sky-500 mt-3 mb-4'>Alvin Sugijanto</p>
                 <div className={`text-bricolage font-bold ${themeClass.textPrimary}`}>
                     <TypeAnimation
@@ -30,13 +40,30 @@ function Hero() {
                     </svg>
                 </button>
 
-            </div>
-            <div className='relative sm:block hidden max-w-md'>
+            </motion.div>
+
+            {/* <motion.div className='relative sm:block hidden max-w-md'
+                animate={{ x: 100 }}
+                transition={{ type: "spring", stiffness: 100 }}
+            >
                 <img src={"./blob.png"} alt="" className='w-auto' />
-                <div className="absolute top-[5%] left-[15%]">
-                    <img src={"./profile.png"} alt="" className='border rounded-full border-transparent object-cover sm:w-[80%] w-[70%] h-auto' />
+                <div className="absolute top-[7%] left-[5%]">
+                    <img src={"./avatar.png"} alt="" className='border-transparent object-cover sm:w-[80%] w-[70%] h-auto' />
                 </div>
-            </div>
+            </motion.div> */}
+            <motion.div variants={{
+                hidden: { opacity: 0, x: 150 },
+                visible: { opacity: 1, x: 0 },
+            }}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 1 }}
+
+            >
+
+                <img src={"./avatar.png"} alt="" className='drop-shadow-navbar border-transparent object-cover max-w-sm' />
+            </motion.div>
+
 
         </div>
     )

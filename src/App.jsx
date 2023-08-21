@@ -11,17 +11,15 @@ import { useTheme } from './ThemeProvider'
 function App() {
   const { darkMode, toggleMode, themeClass } = useTheme();
   return (
-      <div className={`${themeClass.backgroundPrimary} w-full`}>
-        <div className="min-h-screen">
-          <SocialMedia/>
-          <Navbar />
-          <Hero />
-          <About />
-          <Skills />
-          <WorkExperience/>
-          <Projects/>
-        </div>
-      </div>
+    <div className={`${themeClass.backgroundPrimary} w-full min-h-screen`}>
+      <SocialMedia />
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <WorkExperience />
+      <Projects />
+    </div>
   )
 }
 

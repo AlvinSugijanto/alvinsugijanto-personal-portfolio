@@ -5,7 +5,7 @@ function Navbar() {
     const { darkMode, toggleMode, themeClass } = useTheme();
 
     return (
-        <div className='sticky top-0 z-50 py-4 flex justify-around items-center font-bricolage backdrop-blur-md shadow-md'>
+        <div className={`sticky top-0 z-50 py-4 flex justify-around items-center font-bricolage ${themeClass.navbarColor} backdrop-blur-md shadow-md`}>
             <p className='font-bricolage font-bold text-3xl text-sky-500'>Alvin Sugijanto</p>
             <ul className={`lg:flex xl:gap-10 lg:gap-10 text-md hidden ${themeClass.textPrimary}`}>
                 <li className='hover:text-sky-500 cursor-pointer'>About</li>
