@@ -18,7 +18,7 @@ function WorkExperience() {
                 </div>
                 <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-12 sm:gap-6 gap-4">
                     <div className="lg:text-left text-center">
-                        <p className="font-bricolage text-3xl max-w-s">Educations & Experience 🎓</p>
+                        <p className={`font-bricolage text-3xl max-w-s ${themeClass.textPrimary}`}>Educations & Experience 🎓</p>
                         <p className={`text-xl ${themeClass.textPrimary} mt-4 max-w-xs`}>Some of my work experience & latest education</p>
                     </div>
                     <div className={`${themeClass.backgroundSecondary} rounded-xl py-12 lg:px-12 sm:px-12 px-4`}>
@@ -27,13 +27,13 @@ function WorkExperience() {
                                 <div className="rounded-lg px-4 py-2 bg-sky-500 text-white font-semibold inline-flex">EDUCATION</div>
                                 <div className="border-l-2 border-sky-500 px-4 relative pb-2 mt-8">
                                     <div className="bg-sky-500 p-1.5 rounded-full absolute -top-1 -left-[7px]"></div>
-                                    <p className="font-bricolage text-lg mt-4 font-semibold">Universitas Atma Jaya Yogyakarta</p>
-                                    <p className="font-bricolage text-lg mt-3">Informatics</p>
+                                    <p className={`font-bricolage text-lg mt-4 font-semibold ${themeClass.textPrimary}`}>Universitas Atma Jaya Yogyakarta</p>
+                                    <p className={`font-bricolage text-lg mt-3 ${themeClass.textPrimary}`}>Informatics</p>
                                     <p className="font-bricolage text-lg mt-2 text-slate-400">2018-2023</p>
                                 </div>
                                 <div className="border-l-2 border-sky-500 px-4 relative py-8">
                                     <div className="bg-sky-500 p-1.5 rounded-full absolute top-8 -left-[7px]"></div>
-                                    <p className="font-bricolage text-lg font-semibold">SMA NEGERI 1 PURWOKERTO</p>
+                                    <p className={`font-bricolage text-lg font-semibold ${themeClass.textPrimary}`}>SMA NEGERI 1 PURWOKERTO</p>
                                     <p className="font-bricolage text-lg mt-2 text-slate-400">2015-2018</p>
                                 </div>
                             </div>
@@ -41,14 +41,14 @@ function WorkExperience() {
                                 <div className="rounded-lg px-4 py-2 bg-sky-500 text-white font-semibold inline-flex">EXPERIENCE</div>
                                 <div className="border-l-2 border-sky-500 px-4 relative pb-2 mt-8">
                                     <div className="bg-sky-500 p-1.5 rounded-full absolute -top-1 -left-[7px]"></div>
-                                    <p className="font-bricolage text-lg mt-4 font-semibold">Elemen Kopi</p>
-                                    <p className="font-bricolage text-lg mt-3">Freelance</p>
+                                    <p className={`font-bricolage text-lg mt-4 font-semibold ${themeClass.textPrimary}`}>Elemen Kopi</p>
+                                    <p className={`font-bricolage text-lg mt-3 ${themeClass.textPrimary}`}>Freelance</p>
                                     <p className="font-bricolage text-lg mt-2 text-slate-400">September - December 2022</p>
                                 </div>
                                 <div className="border-l-2 border-sky-500 px-4 relative py-8">
                                     <div className="bg-sky-500 p-1.5 rounded-full absolute top-8 -left-[7px]"></div>
-                                    <p className="font-bricolage text-lg font-semibold">Nirbana</p>
-                                    <p className="font-bricolage text-lg mt-3">Freelance</p>
+                                    <p className={`font-bricolage text-lg font-semibold ${themeClass.textPrimary}`}>Nirbana</p>
+                                    <p className={`font-bricolage text-lg mt-3 ${themeClass.textPrimary}`}>Freelance</p>
                                     <p className="font-bricolage text-lg mt-2 text-slate-400">August - October 2021</p>
                                 </div>
                             </div>

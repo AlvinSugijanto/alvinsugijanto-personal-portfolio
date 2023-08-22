@@ -1,5 +1,7 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { useTheme } from '../ThemeProvider';
+
+import { motion, useInView, useAnimate, stagger } from 'framer-motion';
 
 function Skills() {
 
@@ -74,6 +76,15 @@ function Skills() {
     const [skillSection, setSkillSection] = useState('fe')
     const { darkMode, toggleMode, themeClass } = useTheme();
 
+    const [scope, animate] = useAnimate()
+    const isInView = useInView(scope)
+
+    useEffect(() => {
+        if (isInView) {
+            animate("div", { x: [-20, 0], opacity: [0, 1] }, { delay: stagger(0.05), duration: 0.5 })
+        }
+    }, [isInView])
+
     return (
 
         <div className='flex flex-col gap-24 py-24'>
@@ -85,7 +96,7 @@ function Skills() {
             </div>
             <div className="flex lg:flex-row flex-col justify-center items-center gap-12">
                 <div className="lg:text-right text-center lg:order-2">
-                    <p className="font-bricolage text-3xl max-w-s">Tech Stack⚙️ & Tools🛠️</p>
+                    <p className={`font-bricolage text-3xl max-w-s ${themeClass.textPrimary}`}>Tech Stack⚙️ & Tools🛠️</p>
                     <p className={`text-xl ${themeClass.textPrimary} mt-4 max-w-xs`}>Here are some tech stack and tools that I have learned</p>
                 </div>
                 <div className={`${themeClass.backgroundSecondary} rounded-xl py-12 lg:px-12 sm:px-12 px-4`}>
@@ -104,11 +115,13 @@ function Skills() {
                             <p className={`font-bricolage font-semibold text-lg`}>Backend Stack</p>
                         </div>
                     </div>
-                    <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 justify-items-center xl:gap-24 sm:gap-12 gap-4 mt-12 ">
+                    <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 justify-items-center xl:gap-24 sm:gap-12 gap-4 mt-12" ref={scope}>
                         {skillSection === 'fe' ? (
                             <>
-                                {frontendStack.map((items) => (
-                                    <div key={items.nama} className=" w-24">
+                                {frontendStack.map((items, index) => (
+                                    <div
+                                        key={items.nama} className="w-24"
+                                    >
                                         <div className="drop-shadow-custom border rounded-full p-6 bg-slate-100" >
                                             <img src={`./${items.image}`} alt="" className="w-12 h-12 object-contain" />
                                         </div>

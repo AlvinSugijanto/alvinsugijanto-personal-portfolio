@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTheme } from '../ThemeProvider';
 import { TypeAnimation } from 'react-type-animation';
-import { animate, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 function Hero() {
@@ -60,8 +60,9 @@ function Hero() {
                 transition={{ duration: 1 }}
 
             >
-
-                <img src={"./avatar.png"} alt="" className='drop-shadow-navbar border-transparent object-cover max-w-sm' />
+                <div className='max-w-sm sm:block hidden'>
+                    <img src={"./avatar.png"} alt="" className='drop-shadow-navbar border-transparent object-cover w-full' />
+                </div>
             </motion.div>
 
 

@@ -1,12 +1,13 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
-import WorkExperience from './components/WorkExperience'
+import Navbar from './section/Navbar'
+import Hero from './section/Hero'
+import About from './section/About'
+import Skills from './section/Skills'
+import Projects from './section/Projects'
+import WorkExperience from './section/WorkExperience'
 import SocialMedia from './components/SocialMedia'
 
 import { useTheme } from './ThemeProvider'
+
 
 function App() {
   const { darkMode, toggleMode, themeClass } = useTheme();
@@ -16,7 +17,9 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <Skills />
+      {/* <Section> */}
+        <Skills />
+      {/* </Section> */}
       <WorkExperience />
       <Projects />
     </div>

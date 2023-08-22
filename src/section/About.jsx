@@ -21,7 +21,7 @@ function About() {
                         <div className='border-b-2 border-black py-4 lg:text-start text-center'>
                             <p className={`text-3xl font-bold font-bricolage ${themeClass.textPrimary}`}>Hello👋, <span className='text-sky-500'>I am Alvin Sugijanto</span></p>
                             <p className={`text-2xl font-bold font-bricolage mt-2 ${themeClass.textPrimary}`}>A <span className='text-sky-500'>Software Engineer</span> Based In Indonesia</p>
-                            <p className={`mt-4 font-bricolage font-serif text-lg text-justify ${themeClass.textPrimary}`}>I am a highly motivated and dedicated Software Engineer. I graduated from Atma Jaya Yogyakarta University. Throught out the years, I have experienced some freelance projects. With this experiences, I have gained a strong foundation in software development, and I am always eager to learn and grow in my role.</p>
+                            <p className={`mt-4 font-bricolage text-lg text-justify ${themeClass.textPrimary}`}>I am a highly motivated and dedicated Software Engineer. I graduated from Atma Jaya Yogyakarta University. Throught out the years, I have experienced some freelance projects. With this experiences, I have gained a strong foundation in software development, and I am always eager to learn and grow in my role.</p>
                         </div>
                         <div className="grid sm:grid-cols-3 grid-cols-2 gap-12 mt-4">
                             <div className='text-center p-4 drop-shadow-md border-b-2 border-sky-500 rounded-lg'>
