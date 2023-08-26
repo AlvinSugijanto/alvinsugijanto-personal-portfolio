@@ -22,7 +22,7 @@ function Projects() {
 
     return (
         <>
-            <div className="flex flex-col gap-24 py-24">
+            <div className="flex flex-col gap-24 py-28">
 
                 <div className="relative text-center">
                     <div className="absolute -top-8 w-full opacity-20 -z-1">
@@ -32,7 +32,7 @@ function Projects() {
                 </div>
                 <div className="flex justify-center">
                     <div className="max-w-7xl">
-                        <div className="grid grid-cols-3 place-items-center gap-8">
+                        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 place-items-center gap-8">
                             {portofolio.map((porto) => (
 
                                 <div className={`drop-shadow-xl p-6 rounded-md ${themeClass.backgroundSecondary}`} key={porto.title}>
