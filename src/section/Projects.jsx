@@ -30,9 +30,7 @@ function Projects() {
                     </div>
                     <p className={`z-1 text-5xl font-extrabold font-bricolage ${themeClass.textPrimary}`}>Personal Projects</p>
                 </div>
-                <div className="flex justify-center">
-                    <div className="max-w-7xl">
-                        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 place-items-center gap-8">
+                        <div className="px-8 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 place-items-center gap-12">
                             {portofolio.map((porto) => (
 
                                 <div className={`drop-shadow-xl p-6 rounded-md ${themeClass.backgroundSecondary}`} key={porto.title}>
@@ -57,8 +55,7 @@ function Projects() {
                             ))}
                         </div>
                     </div>
-                </div>
-            </div>
+                
 
             <PortfolioModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} portofolio={selectedPortofolio} />
         </>
