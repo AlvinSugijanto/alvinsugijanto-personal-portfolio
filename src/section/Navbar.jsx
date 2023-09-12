@@ -4,6 +4,9 @@ import { useTheme } from '../ThemeProvider';
 function Navbar() {
     const { darkMode, toggleMode, themeClass } = useTheme();
 
+    const handleClickSection = (e) => {
+
+    }
     return (
         <div className={`sticky top-0 z-50 py-4 flex justify-around items-center font-bricolage ${themeClass.navbarColor} backdrop-blur-md shadow-md`}>
             <p className='font-bricolage font-bold text-3xl text-sky-500'>Alvin Sugijanto</p>

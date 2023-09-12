@@ -36,7 +36,7 @@ function Projects() {
                                 <div className={`drop-shadow-xl p-6 rounded-md ${themeClass.backgroundSecondary}`} key={porto.title}>
                                     <img src={porto.thumbnail} alt="" className="w-full border border-slate-800 rounded-lg" />
                                     <p className={`text-xl font-bold font-bricolage mt-3 ${themeClass.textPrimary}`}>{porto.title}</p>
-                                    <div className="flex gap-4 items-center mt-4">
+                                    <div className="flex flex-wrap gap-4 items-center mt-4">
                                         {porto.stack.map((stack) => (
                                             <div className="flex flex-wrap gap-2 items-center border rounded-lg py-1 px-2 bg-slate-100 border-slate-400 text-md" key={stack.name}>
                                                 <img src={stack.image} alt="" className='w-4 h-4' />
@@ -47,7 +47,7 @@ function Projects() {
                                     <p className={`w-full mt-3 line-clamp-3 text-justify ${themeClass.textPrimary}`}>{porto.description}</p>
                                     <div className="flex items-center gap-6">
                                         <button className="rounded-md py-2 px-3 bg-sky-500 text-white font-bricolage font-medium mt-6" onClick={() => { handleOpenPortfolio(porto) }}>Details</button>
-                                        <button className="rounded-md py-2 px-3 border bg-white border-sky-500 text-sky-500 font-bricolage font-medium mt-6">Visit Github</button>
+                                        <button className="rounded-md py-2 px-3 border bg-white border-sky-500 text-sky-500 font-bricolage font-medium mt-6 hover:bg-sky-200">Visit Github</button>
                                     </div>
 
                                 </div>

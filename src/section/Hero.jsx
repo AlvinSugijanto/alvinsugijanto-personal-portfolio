@@ -21,7 +21,7 @@ function Hero() {
                     transition={{ duration: 1 }}
                 >
 
-                    <p className={`${themeClass.textPrimary} font-bold`}>Hi There,</p>
+                    <p className={`${themeClass.textPrimary} font-bold`}>Hi There, My Name Is</p>
                     <p className='font-bricolage font-bold text-5xl text-sky-500 mt-3 mb-4'>Alvin Sugijanto</p>
                     <div className={`text-bricolage font-bold ${themeClass.textPrimary}`}>
                         <TypeAnimation

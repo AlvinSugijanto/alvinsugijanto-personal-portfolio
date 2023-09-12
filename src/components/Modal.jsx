@@ -23,7 +23,7 @@ function PortfolioModal({ isOpen, onOpen, onClose, portofolio }) {
       {portofolio && (
         <Modal isOpen={isOpen} onClose={onClose} scrollBehavior={'inside'}>
           <ModalOverlay />
-          <ModalContent maxWidth="1000px">
+          <ModalContent maxWidth="1000px" marginTop="1rem" marginBottom="1rem" maxHeight="calc(100vh - 50px)">
             <ModalHeader className='font-bricolage'>{portofolio.title}</ModalHeader>
             <ModalCloseButton />
             <ModalBody>
@@ -55,10 +55,10 @@ function PortfolioModal({ isOpen, onOpen, onClose, portofolio }) {
               <p className='mt-2'>{portofolio.description}</p>
             </ModalBody>
             <ModalFooter>
-              <Button colorScheme='blue' mr={3} onClick={onClose}>
+              <Button variant='ghost' mr={3} onClick={onClose}>
                 Close
               </Button>
-              <Button variant='ghost'>Secondary Action</Button>
+              <Button colorScheme='blue'>View Live Website</Button>
             </ModalFooter>
           </ModalContent>
         </Modal>

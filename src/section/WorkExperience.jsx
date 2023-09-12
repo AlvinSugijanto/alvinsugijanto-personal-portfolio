@@ -38,7 +38,7 @@ function WorkExperience() {
                         <p className={`font-bricolage text-3xl max-w-s ${themeClass.textPrimary}`}>Educations & Experience 🎓</p>
                         <p className={`text-xl ${themeClass.textPrimary} mt-4 lg:max-w-xs`}>Some of my work experience & latest education</p>
                     </div>
-                    <div className="sm:max-w-2xl container px-6">
+                    <div className="sm:max-w-2xl container p-6 border-2">
 
                         <Swiper
                             pagination={{
@@ -49,11 +49,10 @@ function WorkExperience() {
                             className="mySwiper w-full"
                         >
                             {workExperience.map((work, index) => (
-
                                 <SwiperSlide key={index} className="flex flex-col gap-4 pt-6 cursor-grab">
-                                    <p className="font-bricolage text-lg font-semibold"><span>{work.company}</span> - {work.role}</p>
-                                    <p className="font-bricolage font-md text-slate-600">{work.work_date}</p>
-                                    <p>{work.description}</p>
+                                    <p className={`font-bricolage text-lg font-semibold ${themeClass.textPrimary}`}><span>{work.company}</span> - {work.role}</p>
+                                    <p className={`font-bricolage font-md ${themeClass.textPrimary}`}>{work.work_date}</p>
+                                    <p className={`${themeClass.textPrimary}`}>{work.description}</p>
                                 </SwiperSlide>
                             ))}
 
