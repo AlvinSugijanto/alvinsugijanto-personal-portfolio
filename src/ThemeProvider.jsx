@@ -32,7 +32,8 @@ const lightThemeClass = () => {
         backgroundPrimary : 'bg-[#F1F5F9]',
         backgroundSecondary : 'bg-white',
         textPrimary : 'text-slate-950',
-        navbarColor : 'bg-transparent'
+        navbarColor : 'bg-transparent',
+        borderColor : 'border-black'
     }
 }
 
@@ -41,7 +42,7 @@ const darkThemeClass = () => {
         backgroundPrimary : 'bg-[#0E1B31]',
         backgroundSecondary : 'bg-[#132347]',
         textPrimary : 'text-slate-50',
-        navbarColor : 'bg-slate-50/10'
-
+        navbarColor : 'bg-slate-50/10',
+        borderColor : 'border-white'
     }
 }

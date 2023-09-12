@@ -30,9 +30,7 @@ function Projects() {
                     </div>
                     <p className={`z-1 lg:text-5xl sm:text-4xl text-3xl font-extrabold font-bricolage ${themeClass.textPrimary}`}>Personal Projects</p>
                 </div>
-                <div className="flex justify-center">
-                    <div className="max-w-7xl">
-                        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 place-items-center gap-8">
+                        <div className="px-8 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 place-items-center gap-12">
                             {portofolio.map((porto) => (
 
                                 <div className={`drop-shadow-xl p-6 rounded-md ${themeClass.backgroundSecondary}`} key={porto.title}>
@@ -49,7 +47,7 @@ function Projects() {
                                     <p className={`w-full mt-3 line-clamp-3 text-justify ${themeClass.textPrimary}`}>{porto.description}</p>
                                     <div className="flex items-center gap-6">
                                         <button className="rounded-md py-2 px-3 bg-sky-500 text-white font-bricolage font-medium mt-6" onClick={() => { handleOpenPortfolio(porto) }}>Details</button>
-                                        <button className="rounded-md py-2 px-3 border bg-white border-sky-500 text-sky-500 font-bricolage font-medium mt-6">Visit Github</button>
+                                        <button className="rounded-md py-2 px-3 border bg-white border-sky-500 text-sky-500 font-bricolage font-medium mt-6 hover:bg-sky-200">Visit Github</button>
                                     </div>
 
                                 </div>
@@ -57,8 +55,7 @@ function Projects() {
                             ))}
                         </div>
                     </div>
-                </div>
-            </div>
+                
 
             <PortfolioModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} portofolio={selectedPortofolio} />
         </>

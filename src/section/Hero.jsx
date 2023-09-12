@@ -11,7 +11,7 @@ function Hero() {
 
     return (
         <>
-            <div className="px-16 py-28 grid lg:grid-cols-2 justify-items-center items-center lg:gap-0 gap-16">
+            <div className="px-16 py-20 grid lg:grid-cols-2 place-items-center lg:gap-0 gap-16">
                 <motion.div className='text-lg text-center' variants={{
                     hidden: { opacity: 0, x: -150 },
                     visible: { opacity: 1, x: 0 },
@@ -21,7 +21,7 @@ function Hero() {
                     transition={{ duration: 1 }}
                 >
 
-                    <p className={`${themeClass.textPrimary} font-bold`}>Hi There,</p>
+                    <p className={`${themeClass.textPrimary} font-bold`}>Hi There, My Name Is</p>
                     <p className='font-bricolage font-bold text-5xl text-sky-500 mt-3 mb-4'>Alvin Sugijanto</p>
                     <div className={`text-bricolage font-bold ${themeClass.textPrimary}`}>
                         <TypeAnimation
