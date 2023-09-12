@@ -26,9 +26,9 @@ function Projects() {
 
                 <div className="relative text-center">
                     <div className="absolute -top-8 w-full opacity-20 -z-1">
-                        <p className='bg-clip-text text-transparent bg-gradient-to-t from-slate-300 to-slate-950 text-6xl font-extrabold'>Personal Projects</p>
+                        <p className='bg-clip-text text-transparent bg-gradient-to-t from-slate-300 to-slate-950 lg:text-6xl sm:text-5xl text-4xl font-extrabold'>Personal Projects</p>
                     </div>
-                    <p className={`z-1 text-5xl font-extrabold font-bricolage ${themeClass.textPrimary}`}>Personal Projects</p>
+                    <p className={`z-1 lg:text-5xl sm:text-4xl text-3xl font-extrabold font-bricolage ${themeClass.textPrimary}`}>Personal Projects</p>
                 </div>
                 <div className="flex justify-center">
                     <div className="max-w-7xl">
@@ -38,10 +38,10 @@ function Projects() {
                                 <div className={`drop-shadow-xl p-6 rounded-md ${themeClass.backgroundSecondary}`} key={porto.title}>
                                     <img src={porto.thumbnail} alt="" className="w-full border border-slate-800 rounded-lg" />
                                     <p className={`text-xl font-bold font-bricolage mt-3 ${themeClass.textPrimary}`}>{porto.title}</p>
-                                    <div className="flex gap-4 items-center mt-4">
+                                    <div className="flex flex-wrap gap-4 items-center mt-4">
                                         {porto.stack.map((stack) => (
-                                            <div className="flex flex-wrap gap-2 items-center border rounded-lg py-1 px-2 bg-slate-100 border-slate-400 text-md" key={stack.name}>
-                                                <img src={stack.image} alt="" className='w-4 h-4' />
+                                            <div className="flex  gap-2 items-center border rounded-lg py-1 px-2 bg-slate-100 border-slate-400 text-md" key={stack.name}>
+                                                <img src={stack.image} alt="" className='w-4 h-4 object-contain' />
                                                 <p className='font-semibold text-sm font-mono uppercase'>{stack.name}</p>
                                             </div>
                                         ))}

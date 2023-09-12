@@ -12,9 +12,8 @@ export default {
           "0 0 5px theme('colors.sky.500')",
           "0 0 20px theme('colors.sky.900')",
         ] 
+      },
 
-
-      }
     },
   },
   plugins: [],
