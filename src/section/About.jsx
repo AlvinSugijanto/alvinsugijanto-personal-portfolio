@@ -8,9 +8,9 @@ function About() {
         <div className='flex flex-col gap-24 py-28'>
             <div className="relative text-center">
                 <div className="absolute -top-8 w-full opacity-20 -z-1">
-                    <p className='bg-clip-text text-transparent bg-gradient-to-t from-slate-300 to-slate-950 text-6xl font-extrabold'>About Me</p>
+                    <p className='bg-clip-text text-transparent bg-gradient-to-t from-slate-300 to-slate-950 lg:text-6xl sm:text-5xl text-4xl font-extrabold'>About Me</p>
                 </div>
-                <p className={`z-1 text-5xl font-extrabold font-bricolage ${themeClass.textPrimary}`}>About Me</p>
+                <p className={`z-1 lg:text-5xl sm:text-4xl text-3xl font-extrabold font-bricolage ${themeClass.textPrimary}`}>About Me</p>
             </div>
             <div className="lg:px-32 px-6">
                 <div className="grid lg:grid-cols-2 justify-items-center items-center">

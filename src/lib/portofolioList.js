@@ -51,15 +51,20 @@ export const portofolioList = [
     },
     {
         thumbnail: './portofolio/petzilla.JPG',
-        title: 'Elemen Kopi',
+        title: 'Restaurant POS',
         stack: [
             {
-                name: 'Laravel',
-                image : './frontend/laravel.png'
+                name: 'React',
+                image : './frontend/reactjs.png'
+            },
+
+            {
+                name : 'Node JS',
+                image : './frontend/nodejs.png'
             },
             {
-                name : 'Livewire',
-                image : './frontend/livewire.png'
+                name : 'Express JS',
+                image : './frontend/expressjs.png'
             },
             {
                 name : 'MySQL',
