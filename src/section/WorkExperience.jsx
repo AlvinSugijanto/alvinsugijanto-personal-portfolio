@@ -30,32 +30,28 @@ function WorkExperience() {
                 <div className="absolute -top-8 w-full opacity-20 -z-1">
                     <p className='bg-clip-text text-transparent bg-gradient-to-t from-slate-300 to-slate-950 lg:text-6xl sm:text-5xl text-4xl font-extrabold'>Experience</p>
                 </div>
-                <p className={`z-1 lg:text-5xl sm:text-4xl text-3xl font-extrabold font-bricolage ${themeClass.textPrimary}`}>Experience</p>
+                <p className={`z-1 lg:text-5xl sm:text-4xl text-3xl font-extrabold font-bricolage ${themeClass.textPrimary}`}>Work Experience</p>
             </div>
-            <div className="flex lg:flex-row flex-col justify-center items-center lg:gap-12 sm:gap-6 gap-4" ref={scope}>
-                <div className="lg:text-left text-center">
-                    <p className={`font-bricolage lg:text-3xl sm:text-2xl text-xl max-w-s ${themeClass.textPrimary}`}>Work Experience 🎓</p>
-                    <p className={`text-xl ${themeClass.textPrimary} mt-4 lg:max-w-xs`}>Some of my work experience & latest education</p>
-                </div>
-                <div className="sm:max-w-2xl container px-6 drop-shadow-md">
+            <div className="flex justify-center items-center lg:gap-12 sm:gap-6 gap-4" ref={scope}>
+
+                <div className="sm:max-w-3xl container px-6 border rounded-md border-sky-400">
 
                     <Swiper
                         pagination={{
-                            type: 'progressbar',
+                            type: 'fraction',
                         }}
-                        spaceBetween={60}
-                        navigation={true}
-                        grabCursor={true}
-                        modules={[Pagination, Navigation]}
-                        className="mySwiper w-full"
+                        className="mySwiper"
                     >
                         {workExperience.map((work, index) => (
 
                             <SwiperSlide key={index}>
-                                <div className="py-12 flex flex-col gap-6">
-                                    <p className={`font-bricolage text-lg font-semibold ${themeClass.textPrimary}`}><span>{work.company}</span> - {work.role}</p>
+                                <div className="px-6 pt-8 pb-16">
+                                    <p className={`font-bricolage text-lg font-bold ${themeClass.textPrimary}`}><span>{work.company}</span> - {work.role}</p>
                                     <p className="font-bricolage font-md text-slate-600">{work.work_date}</p>
-                                    <p className={`${themeClass.textPrimary}`}>{work.description}</p>
+                                    <p className={`font-sans font-semibold my-6 ${themeClass.textPrimary} `}>{work.description}</p>
+                                    {work.points.map((point, index) => (
+                                        <p className={`font-serif text-slate-600/90 mt-2 ${themeClass.textPrimary}`} key={index}>&#8226; {point}</p>
+                                    ))}
                                 </div>
                             </SwiperSlide>
                         ))}

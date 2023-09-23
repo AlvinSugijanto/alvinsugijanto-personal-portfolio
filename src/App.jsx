@@ -12,11 +12,9 @@ import { useRef } from 'react'
 
 function App() {
   const { darkMode, toggleMode, themeClass } = useTheme();  
-  const ref = useRef(null);
 
-  console.log(ref.current);
   return (
-    <div className={`${themeClass.backgroundPrimary} w-full min-h-screen`}>
+    <div className={`${themeClass.backgroundPrimary} w-full min-h-screen overflow-hidden`}>
       <SocialMedia />
       <Navbar/>
       <Hero />
