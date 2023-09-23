@@ -2,8 +2,6 @@ import React from 'react'
 import { useTheme } from '../ThemeProvider';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
-import Mesh from '../assets/mesh';
-import { Canvas } from '@react-three/fiber';
 
 
 function Hero() {
