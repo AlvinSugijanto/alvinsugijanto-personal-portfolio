@@ -16,7 +16,7 @@ export const portofolioList = [
                 image : './frontend/mysql.png'
             }
         ],
-        description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nobis unde numquam error laudantium quaerat illo voluptas voluptatum nulla corrupti?',
+        description : 'Petzilla is an e-commerce platform for dogs and cats pets. The apps implements a radius feature which buyer and seller only able to do transaction within <50km from their current address. Petzila also implements a real-time chat feature.',
         image : [
             './portofolio/petzilla/petzilla.JPG',
             './portofolio/petzilla/homepage.JPG',
@@ -41,7 +41,7 @@ export const portofolioList = [
                 image : './frontend/vite.png'
             },
         ],
-        description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nobis unde numquam error laudantium quaerat illo voluptas voluptatum nulla corrupti?',
+        description : 'A simple card game, find all the matching card and see how much time you can completed!',
         image : [
             './portofolio/guessthecard/guessthecard.JPG',
             './portofolio/guessthecard/true.JPG',
