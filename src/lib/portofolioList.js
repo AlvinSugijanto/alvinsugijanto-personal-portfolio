@@ -26,7 +26,8 @@ export const portofolioList = [
             './portofolio/petzilla/profile.JPG',
             './portofolio/petzilla/store.JPG',
             './portofolio/petzilla/store profile.JPG',
-        ]
+        ],
+        link : 'https://petzilla.my.id/'
     },
     {
         thumbnail: './portofolio/guessthecard/guessthecard.JPG',
@@ -47,7 +48,8 @@ export const portofolioList = [
             './portofolio/guessthecard/true.JPG',
             './portofolio/guessthecard/false.JPG',
             './portofolio/guessthecard/completed.JPG',
-        ]
+        ],
+        link : ''
     },
     {
         thumbnail: './portofolio/petzilla.JPG',
@@ -73,23 +75,5 @@ export const portofolioList = [
         ],
         description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nobis unde numquam error laudantium quaerat illo voluptas voluptatum nulla corrupti?'
     },
-    {
-        thumbnail: './portofolio/petzilla.JPG',
-        title: 'Todo List & Weather Simple App',
-        stack: [
-            {
-                name: 'Laravel',
-                image : './frontend/laravel.png'
-            },
-            {
-                name : 'Livewire',
-                image : './frontend/livewire.png'
-            },
-            {
-                name : 'MySQL',
-                image : './frontend/mysql.png'
-            }
-        ],
-        description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, nobis unde numquam error laudantium quaerat illo voluptas voluptatum nulla corrupti?'
-    },
+
 ]
