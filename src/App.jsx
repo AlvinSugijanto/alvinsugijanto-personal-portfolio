@@ -11,13 +11,15 @@ import { useRef } from 'react'
 
 
 function App() {
-  const { darkMode, toggleMode, themeClass } = useTheme();  
+  const { darkMode, toggleMode, themeClass } = useTheme();
 
   return (
     <div className={`${themeClass.backgroundPrimary} w-full min-h-screen`}>
       <SocialMedia />
-      <Navbar/>
-      <Hero />
+      <div className='min-h-screen flex flex-col'>
+        <Navbar />
+        <Hero />
+      </div>
       <About />
       <Skills />
       <WorkExperience />
