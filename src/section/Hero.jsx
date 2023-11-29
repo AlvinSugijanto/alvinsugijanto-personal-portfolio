@@ -9,7 +9,7 @@ function Hero() {
 
     return (
         <>
-            <div className="px-16 py-20 grid lg:grid-cols-2 place-items-center m-auto">
+            <div className="grid lg:grid-cols-2 place-items-center my-auto lg:gap-16 gap-0 h-full">
                 <motion.div className='text-lg text-center' variants={{
                     hidden: { opacity: 0, x: -150 },
                     visible: { opacity: 1, x: 0 },

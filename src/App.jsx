@@ -16,7 +16,7 @@ function App() {
   return (
     <div className={`${themeClass.backgroundPrimary} w-full min-h-screen overflow-x-hidden`}>
       <SocialMedia />
-      <div className='min-h-screen flex flex-col'>
+      <div className='h-screen flex flex-col'>
         <Navbar />
         <Hero />
       </div>
