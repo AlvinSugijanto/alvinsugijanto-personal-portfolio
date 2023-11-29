@@ -14,7 +14,7 @@ function App() {
   const { darkMode, toggleMode, themeClass } = useTheme();
 
   return (
-    <div className={`${themeClass.backgroundPrimary} w-full min-h-screen`}>
+    <div className={`${themeClass.backgroundPrimary} w-full min-h-screen overflow-x-hidden`}>
       <SocialMedia />
       <div className='min-h-screen flex flex-col'>
         <Navbar />
