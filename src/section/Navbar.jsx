@@ -9,7 +9,7 @@ function Navbar() {
     const animationClasses = toggleHamburger ? 'translate-y-0' : '-translate-y-full';
 
     return (
-        <div className={`sticky top-0 z-50 py-4 flex justify-around items-center font-bricolage ${themeClass.navbarColor} backdrop-blur-md shadow-md`}>
+        <div className={`fixed top-0 z-50 py-4 w-full flex justify-around items-center font-bricolage ${themeClass.navbarColor} backdrop-blur-md shadow-md`}>
             <p className='font-bricolage font-bold text-3xl text-sky-500'>Alvin Sugijanto</p>
             <ul className={`lg:flex xl:gap-10 lg:gap-10 text-md hidden ${themeClass.textPrimary}`}>
                 <li className='hover:text-sky-500 cursor-pointer'>About</li>
