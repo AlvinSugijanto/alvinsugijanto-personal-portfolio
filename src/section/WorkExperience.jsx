@@ -1,26 +1,28 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTheme } from "../ThemeProvider";
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { register } from 'swiper/element/bundle';
+
 
 import { workExperience } from "../lib/workExperience";
 import { useAnimate, useInView } from "framer-motion";
 
+register();
 function WorkExperience() {
 
     const { darkMode, toggleMode, themeClass } = useTheme();
     const [scope, animate] = useAnimate()
     const isInView = useInView(scope)
+    const [alreadyAnimated, setAlreadyAnimated] = useState(false);
 
     useEffect(() => {
-        if (isInView) {
-            const [secondChild] = scope.current.children;
+        if (!alreadyAnimated) {
+            if (isInView) {
+                const [secondChild] = scope.current.children;
 
-            animate(secondChild, { x: [0, 0], y: [-150, 0], opacity: [0, 1] }, { duration: 1 });
+                animate(secondChild, { x: [0, 0], y: [-150, 0], opacity: [0, 1] }, { duration: 1 });
+                setAlreadyAnimated(true);
+            }
         }
     }, [isInView])
     return (
@@ -34,17 +36,12 @@ function WorkExperience() {
             </div>
             <div className="flex justify-center items-center lg:gap-12 sm:gap-6 gap-4" ref={scope}>
 
-                <div className="sm:max-w-3xl container px-6 border rounded-md border-sky-400">
+                <div className="w-full px-6 border rounded-md border-sky-400 ">
 
-                    <Swiper
-                        pagination={{
-                            type: 'fraction',
-                        }}
-                        className="mySwiper"
-                    >
+                    <swiper-container  scrollbar="true">
+
                         {workExperience.map((work, index) => (
-
-                            <SwiperSlide key={index}>
+                            <swiper-slide>
                                 <div className="px-6 pt-8 pb-16">
                                     <p className={`font-bricolage text-lg font-bold ${themeClass.textPrimary}`}><span>{work.company}</span> - {work.role}</p>
                                     <p className="font-bricolage font-md text-slate-600">{work.work_date}</p>
@@ -53,10 +50,10 @@ function WorkExperience() {
                                         <p className={`font-serif text-slate-600/90 mt-2 ${themeClass.textPrimary}`} key={index}>&#8226; {point}</p>
                                     ))}
                                 </div>
-                            </SwiperSlide>
+                            </swiper-slide>
                         ))}
 
-                    </Swiper>
+                    </swiper-container>
                 </div>
             </div>
         </div>

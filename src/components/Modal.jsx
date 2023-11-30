@@ -43,7 +43,7 @@ function PortfolioModal({ isOpen, onOpen, onClose, portofolio }) {
 
               </Swiper>
               <p className='font-bricolage font-semibold mt-2'>Tech Stack</p>
-              <div className="flex items-center gap-4 mt-2">
+              <div className="flex flex-wrap items-center gap-4 mt-2">
                 {portofolio.stack.map((stack) => (
                   <div className="flex gap-2 items-center border rounded-lg py-1 px-2 bg-slate-300" key={stack.name}>
                     <img src={stack.image} alt="" className='w-6 h-6' />

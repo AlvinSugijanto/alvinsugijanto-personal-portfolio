@@ -23,8 +23,8 @@ function Navbar() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
                 </svg>
             </div>
-            <div className='border rounded p-1 bg-sky-600 lg:hidden z-50' onClick={() => setToggleHamburger(!toggleHamburger)}>
-                <svg className="w-8 block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" strokeWidth={0.7} stroke="white" fill="rgba(0,0,0,0)" strokeLinecap="round">
+            <div className='border rounded p-1 bg-sky-600 lg:hidden z-50'>
+                <svg className="w-8 block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" strokeWidth={0.7} stroke="white" fill="rgba(0,0,0,0)" strokeLinecap="round" onClick={() => setToggleHamburger(!toggleHamburger)}>
                     <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
                         <animate dur="0.2s" attributeName="d" values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze" begin="start.begin" />
                         <animate dur="0.2s" attributeName="d" values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze" begin="reverse.begin" />
