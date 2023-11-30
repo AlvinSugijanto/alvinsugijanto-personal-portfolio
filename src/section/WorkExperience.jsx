@@ -36,9 +36,9 @@ function WorkExperience() {
             </div>
             <div className="flex justify-center items-center lg:gap-12 sm:gap-6 gap-4" ref={scope}>
 
-                <div className="w-full px-6 border rounded-md border-sky-400 ">
+                <div className={`max-w-3xl px-6 rounded-md ${themeClass.backgroundSecondary}`}>
 
-                    <swiper-container  scrollbar="true">
+                    <swiper-container  scrollbar="true" grab-cursor="true" >
 
                         {workExperience.map((work, index) => (
                             <swiper-slide>
@@ -47,7 +47,7 @@ function WorkExperience() {
                                     <p className="font-bricolage font-md text-slate-600">{work.work_date}</p>
                                     <p className={`font-sans font-semibold my-6 ${themeClass.textPrimary} `}>{work.description}</p>
                                     {work.points.map((point, index) => (
-                                        <p className={`font-serif text-slate-600/90 mt-2 ${themeClass.textPrimary}`} key={index}>&#8226; {point}</p>
+                                        <p className={`font-serif font-thin mt-2 ${themeClass.textPrimary}`} key={index}>&#8226; {point}</p>
                                     ))}
                                 </div>
                             </swiper-slide>

@@ -58,7 +58,7 @@ function PortfolioModal({ isOpen, onOpen, onClose, portofolio }) {
               <Button variant='ghost' mr={3} onClick={onClose}>
                 Close
               </Button>
-              <Button colorScheme='blue'>View Live Website</Button>
+              <a href={portofolio.link} target="_blank"><Button colorScheme='blue'>View Live Website</Button></a>
             </ModalFooter>
           </ModalContent>
         </Modal>

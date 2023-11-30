@@ -49,7 +49,7 @@ export const portofolioList = [
             './portofolio/guessthecard/false.JPG',
             './portofolio/guessthecard/completed.JPG',
         ],
-        link : ''
+        link : 'https://guess-the-card-game.vercel.app/'
     },
     {
         thumbnail: './portofolio/petzilla.JPG',

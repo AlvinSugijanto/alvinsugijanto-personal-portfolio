@@ -47,7 +47,6 @@ function Projects() {
                                     <p className={`w-full mt-3 line-clamp-3 text-justify ${themeClass.textPrimary}`}>{porto.description}</p>
                                     <div className="flex items-center gap-6">
                                         <button className="rounded-md py-2 px-3 bg-sky-500 text-white font-bricolage font-medium mt-6" onClick={() => { handleOpenPortfolio(porto) }}>Details</button>
-                                        <button className="rounded-md py-2 px-3 border bg-white border-sky-500 text-sky-500 font-bricolage font-medium mt-6 hover:bg-sky-200">Visit Github</button>
                                     </div>
 
                                 </div>

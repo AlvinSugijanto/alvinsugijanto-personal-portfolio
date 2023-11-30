@@ -10,15 +10,14 @@ export const ThemeProvider = ({ children }) => {
 
   const toggleMode = () => {
     setDarkMode(!darkMode);
-    if(darkMode === false)
-    {
-        setThemeClass(darkThemeClass);
-    }else{
-        setThemeClass(lightThemeClass);
+    if (darkMode === false) {
+      setThemeClass(darkThemeClass);
+    } else {
+      setThemeClass(lightThemeClass);
     }
   };
 
- 
+
 
   return (
     <ThemeContext.Provider value={{ darkMode, toggleMode, themeClass }}>
@@ -27,22 +26,22 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-const lightThemeClass = () => {
-    return {
-        backgroundPrimary : 'bg-[#F1F5F9]',
-        backgroundSecondary : 'bg-white',
-        textPrimary : 'text-slate-950',
-        navbarColor : 'bg-transparent',
-        borderColor : 'border-black'
-    }
+const lightThemeClass = {
+
+  backgroundPrimary: 'bg-[#F1F5F9]',
+  backgroundSecondary: 'bg-white',
+  textPrimary: 'text-slate-950',
+  navbarColor: 'bg-transparent',
+  borderColor: 'border-black'
+
 }
 
-const darkThemeClass = () => {
-    return {
-        backgroundPrimary : 'bg-[#0E1B31]',
-        backgroundSecondary : 'bg-[#132347]',
-        textPrimary : 'text-slate-50',
-        navbarColor : 'bg-slate-50/10',
-        borderColor : 'border-white'
-    }
+const darkThemeClass = {
+
+  backgroundPrimary: 'bg-[#0E1B31]',
+  backgroundSecondary: 'bg-[#132347]',
+  textPrimary: 'text-slate-50',
+  navbarColor: 'bg-slate-50/10',
+  borderColor: 'border-white'
+
 }
