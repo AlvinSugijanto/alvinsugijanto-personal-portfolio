@@ -7,14 +7,26 @@ import WorkExperience from './section/WorkExperience'
 import SocialMedia from './components/SocialMedia'
 
 import { useTheme } from './ThemeProvider'
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 
 
 function App() {
   const { darkMode, toggleMode, themeClass } = useTheme();
 
+
+  useEffect(() => {
+    const checkOverflow = () => {
+      document.querySelectorAll('*').forEach((el) => {
+        if (el.offsetWidth > document.documentElement.offsetWidth) {
+          console.log('Found the worst element ever: ', el);
+        }
+      });
+    };
+    checkOverflow();
+
+  }, []);
   return (
-    <div className={`${themeClass.backgroundPrimary} w-full min-h-screen overflow-x-hidden`}>
+    <div className={`${themeClass.backgroundPrimary} w-full min-h-screen`}>
       <SocialMedia />
       <div className='h-screen flex flex-col'>
         <Navbar />

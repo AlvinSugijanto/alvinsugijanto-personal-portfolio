@@ -3,7 +3,3 @@
 @import 'tailwindcss/utilities';
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&display=swap');
 
-
-.swiper .swiper-scrollbar{
-    background-color: red;
-}

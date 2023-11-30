@@ -36,7 +36,7 @@ function WorkExperience() {
             </div>
             <div className="flex justify-center items-center lg:gap-12 sm:gap-6 gap-4" ref={scope}>
 
-                <div className={`max-w-3xl px-6 rounded-md ${themeClass.backgroundSecondary}`}>
+                <div className={`max-w-3xl container px-6 rounded-md ${themeClass.backgroundSecondary}`}>
 
                     <swiper-container  scrollbar="true" grab-cursor="true" >
 
