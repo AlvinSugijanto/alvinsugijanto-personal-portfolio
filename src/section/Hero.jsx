@@ -2,6 +2,7 @@ import React from 'react'
 import { useTheme } from '../ThemeProvider';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
+import Coba from '../components/Coba';
 
 
 function Hero() {
@@ -51,8 +52,10 @@ function Hero() {
                     transition={{ duration: 1 }}
 
                 >
-                    <div className='max-w-sm sm:block hidden'>
-                        <img src={"./avatar.png"} alt="" className='drop-shadow-navbar border-transparent object-cover w-full' />
+                    <div className='sm:block hidden'>
+                        <div className='z-50 mt-14'>
+                            <Coba/>
+                        </div>
                     </div>
                 </motion.div>
 
