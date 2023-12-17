@@ -52,8 +52,8 @@ function Hero() {
                     transition={{ duration: 1 }}
 
                 >
-                    <div className='sm:block hidden'>
-                        <div className='z-50 mt-14'>
+                    <div className='sm:block hidden mt-16'>
+                        <div className='z-50'>
                             <Coba/>
                         </div>
                     </div>
