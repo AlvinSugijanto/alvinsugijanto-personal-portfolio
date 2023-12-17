@@ -52,10 +52,11 @@ function Hero() {
                     transition={{ duration: 1 }}
 
                 >
-                    <div className='sm:block hidden mt-16'>
-                        <div className='z-50'>
+                    <div className='max-w-sm sm:block hidden relative'>
+                        <div className='z-50 mt-16'>
                             <Coba/>
                         </div>
+                        {/* <img src={"./avatar.png"} alt="" className='drop-shadow-navbar border-transparent object-cover w-full' /> */}
                     </div>
                 </motion.div>
 
