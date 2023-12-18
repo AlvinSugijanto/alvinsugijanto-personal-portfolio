@@ -37,7 +37,7 @@ function App() {
       }
 
       setClassNames(temp);
-    }, 2000)
+    }, 3000)
   }, [])
 
 
@@ -45,7 +45,7 @@ function App() {
     <>
       <div className={`flex justify-center items-center h-screen w-full ${classNames.loader}`}>
         
-        <p className='text-3xl font-sans font-semibold'>Wait a minute...</p>
+        <p className='text-3xl font-sans tracking-wide'>Wait a second . . .</p>
       </div>
       <div className={`${themeClass.backgroundPrimary} w-full min-h-screen ${classNames.element}`}>
         <SocialMedia />
