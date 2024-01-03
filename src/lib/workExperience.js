@@ -1,6 +1,6 @@
 export const workExperience = [
     {
-        company : 'Nirbana (Freelance)',
+        company : 'Nirbana (Internship)',
         role : 'Backend Developer',
         work_date : 'July 2021 - September 2021',
         work_place : 'Indonesia',
