@@ -13,8 +13,8 @@ import { useEffect, useRef, useState } from 'react'
 function App() {
   const { darkMode, toggleMode, themeClass } = useTheme();
   const [classNames, setClassNames] = useState({
-    loader : 'block',
-    element : 'invisible'
+    loader: 'block',
+    element: 'invisible'
   });
 
   // useEffect(() => {
@@ -29,11 +29,17 @@ function App() {
 
   // }, []);
 
+  const homeRef = useRef();
+  const aboutRef = useRef();
+  const skillsRef = useRef();
+  const experienceRef = useRef();
+  const projectsRef = useRef();
+
   useEffect(() => {
     setTimeout(() => {
       const temp = {
-        loader : 'hidden',
-        element : 'visible'
+        loader: 'hidden',
+        element: 'visible'
       }
 
       setClassNames(temp);
@@ -44,19 +50,25 @@ function App() {
   return (
     <>
       <div className={`flex justify-center items-center h-screen w-full ${classNames.loader}`}>
-        
+
         <p className='text-3xl font-sans tracking-wide'>Wait a second . . .</p>
       </div>
-      <div className={`${themeClass.backgroundPrimary} w-full min-h-screen ${classNames.element}`}>
+      <div className={`${themeClass.backgroundPrimary} w-full min-h-screen ${classNames.element}`} ref={homeRef}>
         <SocialMedia />
         <div className='min-h-screen flex flex-col'>
-          <Navbar />
+          <Navbar
+            homeRef={homeRef}
+            aboutRef={aboutRef}
+            skillsRef={skillsRef}
+            experienceRef={experienceRef}
+            projectsRef={projectsRef}
+          />
           <Hero />
         </div>
-        <About />
-        <Skills />
-        <WorkExperience />
-        <Projects />
+        <About aboutRef={aboutRef} />
+        <Skills skillsRef={skillsRef} />
+        <WorkExperience experienceRef={experienceRef} />
+        <Projects projectsRef={projectsRef} />
       </div>
     </>
   )

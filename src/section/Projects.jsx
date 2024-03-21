@@ -6,7 +6,7 @@ import PortfolioModal from "../components/Modal";
 import { useDisclosure } from "@chakra-ui/react";
 
 
-function Projects() {
+function Projects({ projectsRef }) {
 
     const portofolio = portofolioList;
     const { darkMode, toggleMode, themeClass } = useTheme();
@@ -22,7 +22,7 @@ function Projects() {
 
     return (
         <>
-            <div className="flex flex-col gap-24 py-28">
+            <div className="flex flex-col gap-24 py-28" ref={projectsRef}>
 
                 <div className="relative text-center">
                     <div className="absolute -top-8 w-full opacity-20 -z-1">

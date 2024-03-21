@@ -1,11 +1,11 @@
 import { useTheme } from '../ThemeProvider';
 
 
-function About() {
+function About({ aboutRef }) {
     const { darkMode, toggleMode, themeClass } = useTheme();
 
     return (
-        <div className='flex flex-col gap-24 py-28'>
+        <div className='flex flex-col gap-24 py-28' ref={aboutRef}>
             <div className="relative text-center">
                 <div className="absolute -top-8 w-full opacity-20 -z-1">
                     <p className='bg-clip-text text-transparent bg-gradient-to-t from-slate-300 to-slate-950 lg:text-6xl sm:text-5xl text-4xl font-extrabold'>About Me</p>

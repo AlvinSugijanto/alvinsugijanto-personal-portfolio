@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import { useTheme } from "../ThemeProvider";
 
 import { register } from 'swiper/element/bundle';
@@ -8,7 +8,7 @@ import { workExperience } from "../lib/workExperience";
 import { useAnimate, useInView } from "framer-motion";
 
 register();
-function WorkExperience() {
+function WorkExperience({ experienceRef }) {
 
     const { darkMode, toggleMode, themeClass } = useTheme();
     const [scope, animate] = useAnimate()
@@ -27,7 +27,7 @@ function WorkExperience() {
     }, [isInView])
     return (
 
-        <div className="flex flex-col gap-24 py-28">
+        <div className="flex flex-col gap-24 py-28" ref={experienceRef}>
             <div className="relative text-center">
                 <div className="absolute -top-8 w-full opacity-20 -z-1">
                     <p className='bg-clip-text text-transparent bg-gradient-to-t from-slate-300 to-slate-950 lg:text-6xl sm:text-5xl text-4xl font-extrabold'>Experience</p>
@@ -38,19 +38,21 @@ function WorkExperience() {
 
                 <div className={`max-w-3xl container px-6 rounded-md ${themeClass.backgroundSecondary}`}>
 
-                    <swiper-container  scrollbar="true" grab-cursor="true" >
+                    <swiper-container scrollbar="true" grab-cursor="true" >
 
                         {workExperience.map((work, index) => (
-                            <swiper-slide>
-                                <div className="px-6 pt-8 pb-16">
-                                    <p className={`font-bricolage text-lg font-bold ${themeClass.textPrimary}`}><span>{work.company}</span> - {work.role}</p>
-                                    <p className="font-bricolage font-md text-slate-600">{work.work_date}</p>
-                                    <p className={`font-sans font-semibold my-6 ${themeClass.textPrimary} `}>{work.description}</p>
-                                    {work.points.map((point, index) => (
-                                        <p className={`font-serif font-thin mt-2 ${themeClass.textPrimary}`} key={index}>&#8226; {point}</p>
-                                    ))}
-                                </div>
-                            </swiper-slide>
+                            <Fragment key={work.company}>
+                                <swiper-slide>
+                                    <div className="px-6 pt-8 pb-16">
+                                        <p className={`font-bricolage text-lg font-bold ${themeClass.textPrimary}`}><span>{work.company}</span> - {work.role}</p>
+                                        <p className="font-bricolage font-md text-slate-600">{work.work_date}</p>
+                                        <p className={`font-sans font-semibold my-6 ${themeClass.textPrimary} `}>{work.description}</p>
+                                        {work.points.map((point, index) => (
+                                            <p className={`font-serif font-thin mt-2 ${themeClass.textPrimary}`} key={index}>&#8226; {point}</p>
+                                        ))}
+                                    </div>
+                                </swiper-slide>
+                            </Fragment>
                         ))}
 
                     </swiper-container>

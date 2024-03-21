@@ -1,22 +1,61 @@
 import React, { useState } from 'react'
 import { useTheme } from '../ThemeProvider';
 
-function Navbar() {
+function Navbar({
+    homeRef,
+    aboutRef,
+    skillsRef,
+    experienceRef,
+    projectsRef
+}) {
     const { darkMode, toggleMode, themeClass } = useTheme();
 
     const [toggleHamburger, setToggleHamburger] = useState(false);
 
     const animationClasses = toggleHamburger ? 'translate-y-0' : '-translate-y-full';
 
+    const navbarList = [
+        {
+            label: 'Home',
+            ref: homeRef
+        },
+        {
+            label: 'About',
+            ref: aboutRef
+        },
+        {
+            label: 'Skills',
+            ref: skillsRef
+        },
+        {
+            label: 'Experience',
+            ref: experienceRef
+        },
+        {
+            label: 'Projects',
+            ref: projectsRef
+        }
+    ]
+
     return (
         <div className={`fixed top-0 z-50 py-4 w-full flex justify-around items-center font-bricolage ${themeClass.navbarColor} backdrop-blur-md shadow-md`}>
             <p className='font-bricolage font-bold text-3xl text-sky-500'>Alvin Sugijanto</p>
             <ul className={`lg:flex xl:gap-10 lg:gap-10 text-md hidden ${themeClass.textPrimary}`}>
-                <li className='hover:text-sky-500 cursor-pointer'>About</li>
-                <li className='hover:text-sky-500 cursor-pointer'>Skills</li>
-                <li className='hover:text-sky-500 cursor-pointer'>Education</li>
-                <li className='hover:text-sky-500 cursor-pointer'>Experience</li>
-                <li className='hover:text-sky-500 cursor-pointer'>Contact</li>
+                {navbarList.map((item, index) => (
+                    <li
+                        key={item.label}
+                        className='hover:text-sky-500 cursor-pointer'
+                        onClick={
+                            () =>
+                                item.ref.current.scrollIntoView({
+                                    behavior: "smooth",
+                                    block: "start"
+                                })
+                                // console.log(item.ref.current)
+                        }>
+                        {item.label}
+                    </li>
+                ))}
             </ul>
             <div className={`border p-3 rounded-full drop-shadow  cursor-pointer ${darkMode ? "bg-slate-300 hover:bg-slate-400" : "bg-sky-200 hover:bg-sky-600"}`} onClick={toggleMode}>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -41,11 +80,9 @@ function Navbar() {
 
             <div className={`bg-sky-400 fixed z-40 top-0 left-0 flex w-full h-screen transition-all ease-out duration-300  ${animationClasses}`}>
                 <ul className={`m-auto flex flex-col gap-12 text-xl font-semibold text-slate-800 ${themeClass.textPrimary}`}>
-                    <li className='hover:text-sky-500 cursor-pointer text-center '>About</li>
-                    <li className='hover:text-sky-500 cursor-pointer text-center '>Skills</li>
-                    <li className='hover:text-sky-500 cursor-pointer text-center '>Education</li>
-                    <li className='hover:text-sky-500 cursor-pointer text-center '>Experience</li>
-                    <li className='hover:text-sky-500 cursor-pointer text-center '>Contact</li>
+                    {navbarList.map((item) => (
+                        <li className='hover:text-sky-500 cursor-pointer text-center ' key={item.label}>{item.label}</li>
+                    ))}
                 </ul>
             </div>
 
